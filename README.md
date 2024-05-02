@@ -8,9 +8,6 @@ Steps for renewing certs:
 ```
 rm -f certbot/conf/archive/jonasjschreiber.com/privkey2.pem
 docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d jonasjschreiber.com
-
 docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d www.jonasjschreiber.com
-
 docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d grafana.jonasjschreiber.com
-
 docker restart [nginx container ID]
